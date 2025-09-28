@@ -3,8 +3,8 @@ import { User, Workout, AIWorkoutPlan } from '../types';
 // API Base URL configuration for development vs production
 // In production (Render), frontend and backend are served from same domain
 // In development, backend runs on localhost:3001
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
-  (import.meta.env.PROD ? '' : 'http://localhost:3001');
+const API_BASE_URL = (import.meta.env as any).VITE_API_BASE_URL || 
+  ((import.meta.env as any).PROD ? '' : 'http://localhost:3001');
 
 // API Functions
 
